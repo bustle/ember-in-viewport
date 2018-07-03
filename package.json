@@ -9,7 +9,9 @@
   "scripts": {
     "start": "ember server",
     "build": "ember build",
-    "test": "ember try:testall"
+    "test": "ember try:testall",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": "https://github.com/dockyard/ember-in-viewport",
   "engines": {
@@ -50,11 +52,13 @@
     "scrollspy"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.1.5",
-    "ember-getowner-polyfill": "^1.0.0"
+    "ember-cli-babel": "^6.0.0",
+    "ember-getowner-polyfill": "^2.0.0",
+    "snyk": "^1.88.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
     "demoURL": "http://development.ember-in-viewport-demo.divshot.io"
-  }
+  },
+  "snyk": true
 }
